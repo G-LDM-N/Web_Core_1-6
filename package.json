@@ -1,7 +1,7 @@
 {
-  "name": "web-last-block",
-  "version": "1.0.0",
-  "description": "",
+  "name": "kata_webcore_1-6",
+  "version": "1.7.23",
+  "description": "Kata WebCore 1.6.",
   "keywords": [
     "web",
     "scss",
@@ -10,7 +10,7 @@
     "webpack"
   ],
   "license": "ISC",
-  "author": "Kata Academy",
+  "author": "Nikolaí Goľdman <n.s.goldman@yandex.ru>",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -46,8 +46,8 @@
   },
   "engineStrict": true,
   "engines": {
-    "node": "~14.18.3",
-    "npm": "~6.14.15"
+    "node": "~14.21.3",
+    "npm": "~6.14.18"
   },
   "postcss": {
     "plugins": {
