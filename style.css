@@ -82,7 +82,7 @@ body {
   height: 100vh;
   background: #ffffff;
   z-index: 61;
-  transition: all 400ms linear; }
+  transition: all 0.5s linear; }
   @media (min-width: 361px) {
     .sidebar {
       width: 320px;
@@ -152,7 +152,7 @@ body {
         color: #1b1c21; }
         .sidebar__services-select .service__select .service-btn:focus {
           color: #ff3e79; }
-      .sidebar__services-select .service__select:hover:before {
+      .sidebar__services-select .service__select::before {
         content: "";
         position: absolute;
         left: 0;
@@ -160,7 +160,11 @@ body {
         height: 32px;
         background-color: #41f6d7;
         border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px; }
+        border-bottom-right-radius: 3px;
+        opacity: 0;
+        transition: opacity 0.5s; }
+      .sidebar__services-select .service__select:hover:before {
+        opacity: 1; }
     .sidebar__services-select > li:last-child {
       margin-bottom: 0; }
   .sidebar__bottom {
