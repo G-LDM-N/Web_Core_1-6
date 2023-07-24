@@ -291,7 +291,7 @@ body {
       text-align: center;
       background: #f8f8f8;
       border: 0;
-      padding: 6px 14px;
+      padding: 8px 14px;
       margin-right: 6px;
       font-size: 16px;
       line-height: 24px;
@@ -300,7 +300,11 @@ body {
       .main-services .list__item:focus {
         background: #ffffff;
         border: 2px solid #b8ffec;
-        border-radius: 6px; }
+        border-radius: 6px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        padding-left: 12px;
+        padding-right: 12px; }
   @media (min-width: 768px) {
     .main-services .content {
       display: flex; } }
@@ -335,7 +339,7 @@ body {
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1b1c21;
-    font-weight: 600; }
+    font-weight: 500; }
   .main-services .content .read-more-checker:checked ~ .read-more-button:after {
     content: "Скрыть";
     background-image: url(./static/icon.svg);
