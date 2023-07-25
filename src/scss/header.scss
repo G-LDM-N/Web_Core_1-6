@@ -19,26 +19,26 @@
       padding: 0 8px;
     }
 
-    .select-list__burger,
-    .select-list__contacts {
+    &__list-burger,
+    &__list-contacts {
       list-style-type: none;
       display: flex;
       align-items: center;
       padding-left: 0px;
     }
 
-    .select-list__burger > button {
+    &__list-burger > button {
       background: #ffffff;
       border: white;
       padding: 0px;
       margin-left: 16px;
     }
 
-    .select-list__contacts > li {
+    &__list-contacts > li {
       padding-right: 16px;
     }
 
-    .select-list__contacts > li > button {
+    &__list-contacts > li > button {
       background: #ffffff;
       border: white;
       padding: 0px;

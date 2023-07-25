@@ -2,7 +2,7 @@
   background: #f8f8f8;
 
   .services {
-    .service__group {
+    &__service-group {
       display: flex;
       align-items: center;
 
