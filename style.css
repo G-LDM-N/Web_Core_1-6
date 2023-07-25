@@ -121,10 +121,10 @@ body {
     @media (min-width: 1440px) {
       .sidebar__select-list {
         display: block; } }
-  .sidebar .select__cross {
+  .sidebar__select-cross {
     margin-right: 17px; }
     @media (min-width: 1440px) {
-      .sidebar .select__cross .cross-btn {
+      .sidebar__select-cross .cross-btn {
         display: none; } }
   .sidebar .btn {
     background: none;
@@ -140,33 +140,33 @@ body {
     flex-direction: column;
     list-style: none;
     padding: 0; }
-    .sidebar__services-select .service__select {
-      display: flex;
-      margin-bottom: 32px;
-      align-items: center; }
-      .sidebar__services-select .service__select .service-btn {
-        font-family: "TT Lakes", sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        color: #1b1c21; }
-        .sidebar__services-select .service__select .service-btn:focus {
-          color: #ff3e79; }
-      .sidebar__services-select .service__select::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 4px;
-        height: 32px;
-        background-color: #41f6d7;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        opacity: 0;
-        transition: opacity 0.5s; }
-      .sidebar__services-select .service__select:hover:before {
-        opacity: 1; }
-    .sidebar__services-select > li:last-child {
-      margin-bottom: 0; }
+  .sidebar__service-select {
+    display: flex;
+    margin-bottom: 32px;
+    align-items: center; }
+    .sidebar__service-select .service-btn {
+      font-family: "TT Lakes", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1b1c21; }
+      .sidebar__service-select .service-btn:focus {
+        color: #ff3e79; }
+    .sidebar__service-select::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 4px;
+      height: 32px;
+      background-color: #41f6d7;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      opacity: 0;
+      transition: opacity 0.5s; }
+    .sidebar__service-select:hover:before {
+      opacity: 1; }
+  .sidebar > li:last-child {
+    margin-bottom: 0; }
   .sidebar__bottom {
     margin-top: auto;
     margin-bottom: 95px; }
@@ -213,24 +213,24 @@ body {
     text-decoration: none; }
     .sidebar__phone-text:hover {
       animation: 0.7s tremor ease-out infinite; }
-  .sidebar .lang__btn {
+  .sidebar__lang-btn {
     font-family: TT Lakes, sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1b1c21;
     margin-right: 7px; }
-    .sidebar .lang__btn:hover, .sidebar .lang__btn:focus {
+    .sidebar__lang-btn:hover, .sidebar__lang-btn:focus {
       color: #ff3e79; }
   .sidebar--active {
     left: 0px; }
 
 .main-services {
   background: #f8f8f8; }
-  .main-services .services .service__group {
+  .main-services .services__service-group {
     display: flex;
     align-items: center; }
-    .main-services .services .service__group::before {
+    .main-services .services__service-group::before {
       content: "";
       width: 4px;
       height: 40px;
@@ -238,17 +238,17 @@ body {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px; }
     @media (min-width: 1440px) {
-      .main-services .services .service__group {
+      .main-services .services__service-group {
         align-items: center; } }
-    .main-services .services .service__group .service-title {
+    .main-services .services__service-group .service-title {
       letter-spacing: -0.6px;
       line-height: 40px;
       padding-left: 12px; }
       @media (min-width: 768px) {
-        .main-services .services .service__group .service-title {
+        .main-services .services__service-group .service-title {
           padding-left: 20px; } }
       @media (min-width: 1440px) {
-        .main-services .services .service__group .service-title {
+        .main-services .services__service-group .service-title {
           margin: 0px;
           padding-left: 28px; } }
   @media (min-width: 1440px) {
@@ -410,20 +410,19 @@ body {
     @media (min-width: 768px) {
       .header .menu-select {
         padding: 0 8px; } }
-    .header .menu-select .select-list__burger,
-    .header .menu-select .select-list__contacts {
+    .header .menu-select__list-burger, .header .menu-select__list-contacts {
       list-style-type: none;
       display: flex;
       align-items: center;
       padding-left: 0px; }
-    .header .menu-select .select-list__burger > button {
+    .header .menu-select__list-burger > button {
       background: #ffffff;
       border: white;
       padding: 0px;
       margin-left: 16px; }
-    .header .menu-select .select-list__contacts > li {
+    .header .menu-select__list-contacts > li {
       padding-right: 16px; }
-    .header .menu-select .select-list__contacts > li > button {
+    .header .menu-select__list-contacts > li > button {
       background: #ffffff;
       border: white;
       padding: 0px; }
@@ -455,7 +454,7 @@ body {
       .header .list-profile {
         display: block; } }
 
-.footer__cps {
+.footer-cps {
   display: flex;
   flex-direction: column;
   background-color: #f8f8f8;
@@ -463,13 +462,13 @@ body {
   padding: 16px 16px 19px 16px;
   border-top: 1px #d9fff5 solid; }
   @media (min-width: 768px) {
-    .footer__cps {
+    .footer-cps {
       flex-direction: row;
       padding-left: 24px; } }
   @media (min-width: 1440px) {
-    .footer__cps {
+    .footer-cps {
       padding-left: 32px; } }
-  .footer__cps .footer__text {
+  .footer-cps__text {
     text-align: center;
     margin-top: 0;
     font-family: TT Lakes;
@@ -479,24 +478,24 @@ body {
     color: #7e7e82;
     mix-blend-mode: normal;
     opacity: 0.72; }
-    .footer__cps .footer__text.information {
+    .footer-cps__text.information {
       margin-bottom: 0; }
     @media (min-width: 768px) {
-      .footer__cps .footer__text.apesong {
+      .footer-cps__text.apesong {
         text-align: left;
         flex-basis: 33%; } }
     @media (min-width: 768px) {
-      .footer__cps .footer__text.confidential {
+      .footer-cps__text.confidential {
         text-align: center;
         flex-basis: 33%; } }
     @media (min-width: 768px) {
-      .footer__cps .footer__text.information {
+      .footer-cps__text.information {
         text-align: right;
         flex-basis: 33%; } }
 
-.about__service-repair {
+.about-service {
   background: #f8f8f8; }
-  .about__service-repair .repair__block {
+  .about-service__repair-block {
     display: flex;
     align-items: center;
     background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
@@ -505,55 +504,55 @@ body {
     margin-top: 20px;
     margin-bottom: 16px; }
     @media (min-width: 768px) {
-      .about__service-repair .repair__block {
+      .about-service__repair-block {
         margin-bottom: 30px; } }
-    .about__service-repair .repair__block .repair__text {
-      margin-left: 16px;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.2px;
-      text-transform: uppercase;
-      color: #7e7e82; }
-      @media (min-width: 768px) {
-        .about__service-repair .repair__block .repair__text {
-          margin-left: 24px; } }
-  .about__service-repair .brands__container {
+  .about-service__repair-text {
+    margin-left: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7e7e82; }
+    @media (min-width: 768px) {
+      .about-service__repair-text {
+        margin-left: 24px; } }
+  .about-service .brands-container {
     background: #f8f8f8;
     overflow: hidden; }
-    .about__service-repair .brands__container .swiper-container__brand {
+    .about-service .brands-container__swiper {
       position: relative;
       overflow: hidden;
       max-height: 175px;
       background: #f8f8f8;
       transition: all 0.6s; }
       @media (min-width: 320px) and (max-width: 767px) {
-        .about__service-repair .brands__container .swiper-container__brand {
+        .about-service .brands-container__swiper {
           max-height: 100vh; } }
-      .about__service-repair .brands__container .swiper-container__brand .swiper-wrapper {
+      .about-service .brands-container__swiper .swiper-wrapper {
         list-style: none;
         padding: 0px;
         margin-left: 16px; }
         @media (min-width: 768px) {
-          .about__service-repair .brands__container .swiper-container__brand .swiper-wrapper {
+          .about-service .brands-container__swiper .swiper-wrapper {
             flex-wrap: wrap;
             margin-left: 24px; } }
         @media (min-width: 1440px) {
-          .about__service-repair .brands__container .swiper-container__brand .swiper-wrapper {
+          .about-service .brands-container__swiper .swiper-wrapper {
             flex-wrap: wrap;
             margin-left: 32px; } }
-      .about__service-repair .brands__container .swiper-container__brand .swiper-slide {
+      .about-service .brands-container__swiper .swiper-slide {
         width: 240px; }
         @media (min-width: 768px) {
-          .about__service-repair .brands__container .swiper-container__brand .swiper-slide {
+          .about-service .brands-container__swiper .swiper-slide {
             width: 224px;
             margin-bottom: 16px;
             margin-right: 24px; } }
         @media (min-width: 1440px) {
-          .about__service-repair .brands__container .swiper-container__brand .swiper-slide {
+          .about-service .brands-container__swiper .swiper-slide {
             width: 240px;
             margin-bottom: 16px;
             margin-right: 32px; } }
-        .about__service-repair .brands__container .swiper-container__brand .swiper-slide .btn-swipe {
+        .about-service .brands-container__swiper .swiper-slide__btn-swipe {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -565,22 +564,22 @@ body {
           border: 1px solid #eaeaea;
           box-sizing: border-box;
           border-radius: 6px; }
-      .about__service-repair .brands__container .swiper-container__brand .swipe__pagination {
+      .about-service .brands-container__swiper .swipe-pagination {
         position: unset;
         margin-top: 16px; }
         @media (min-width: 768px) {
-          .about__service-repair .brands__container .swiper-container__brand .swipe__pagination {
+          .about-service .brands-container__swiper .swipe-pagination {
             display: none; } }
-      .about__service-repair .brands__container .swiper-container__brand .swiper-pagination-bullet {
+      .about-service .brands-container__swiper .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
         background-color: #dddddd; }
-      .about__service-repair .brands__container .swiper-container__brand .swiper-pagination-bullet-active {
+      .about-service .brands-container__swiper .swiper-pagination-bullet-active {
         background-color: #b5b6bc; }
-      .about__service-repair .brands__container .swiper-container__brand--active {
+      .about-service .brands-container__swiper--active {
         overflow: visible;
         max-height: 100vh; }
-    .about__service-repair .brands__container .show__more {
+    .about-service .brands-container .show-more {
       display: none;
       cursor: pointer;
       align-items: center;
@@ -597,15 +596,15 @@ body {
       color: #1b1c21;
       margin: 0px 0px 0px 16px; }
       @media (min-width: 768px) {
-        .about__service-repair .brands__container .show__more {
+        .about-service .brands-container .show-more {
           display: flex;
           margin-left: 32px; } }
       @media (min-width: 1440px) {
-        .about__service-repair .brands__container .show__more {
+        .about-service .brands-container .show-more {
           margin-left: 39px; } }
-      .about__service-repair .brands__container .show__more--none {
+      .about-service .brands-container .show-more--none {
         display: none; }
-    .about__service-repair .brands__container .hide__all {
+    .about-service .brands-container .hide-all {
       display: none;
       cursor: pointer;
       align-items: center;
@@ -622,52 +621,52 @@ body {
       color: #1b1c21;
       margin: 0px 0px 0px 16px; }
       @media (min-width: 768px) {
-        .about__service-repair .brands__container .hide__all {
+        .about-service .brands-container .hide-all {
           margin-left: 32px; }
-          .about__service-repair .brands__container .hide__all--active {
+          .about-service .brands-container .hide-all--active {
             display: block; } }
       @media (min-width: 1440px) {
-        .about__service-repair .brands__container .hide__all {
+        .about-service .brands-container .hide-all {
           margin-left: 39px; } }
-    .about__service-repair .brands__container .read__arrows {
+    .about-service .brands-container .read-arrows {
       margin-right: 16px; }
-  .about__service-repair .technique__container {
+  .about-service .technique-container {
     background: #f8f8f8;
     overflow: hidden; }
-    .about__service-repair .technique__container .swiper-container__technique {
+    .about-service .technique-container__swiper {
       position: relative;
       overflow: hidden;
       max-height: 175px;
       background: #f8f8f8;
       transition: all 0.6s; }
       @media (min-width: 320px) and (max-width: 767px) {
-        .about__service-repair .technique__container .swiper-container__technique {
+        .about-service .technique-container__swiper {
           max-height: 100vh; } }
-      .about__service-repair .technique__container .swiper-container__technique .swiper-wrapper {
+      .about-service .technique-container__swiper .swiper-wrapper {
         list-style: none;
         padding: 0px;
         margin-left: 16px; }
         @media (min-width: 768px) {
-          .about__service-repair .technique__container .swiper-container__technique .swiper-wrapper {
+          .about-service .technique-container__swiper .swiper-wrapper {
             flex-wrap: wrap;
             margin-left: 24px; } }
         @media (min-width: 1440px) {
-          .about__service-repair .technique__container .swiper-container__technique .swiper-wrapper {
+          .about-service .technique-container__swiper .swiper-wrapper {
             flex-wrap: wrap;
             margin-left: 32px; } }
-      .about__service-repair .technique__container .swiper-container__technique .swiper-slide {
+      .about-service .technique-container__swiper .swiper-slide {
         width: 240px; }
         @media (min-width: 768px) {
-          .about__service-repair .technique__container .swiper-container__technique .swiper-slide {
+          .about-service .technique-container__swiper .swiper-slide {
             width: 224px;
             margin-bottom: 16px;
             margin-right: 24px; } }
         @media (min-width: 1440px) {
-          .about__service-repair .technique__container .swiper-container__technique .swiper-slide {
+          .about-service .technique-container__swiper .swiper-slide {
             width: 240px;
             margin-bottom: 16px;
             margin-right: 32px; } }
-        .about__service-repair .technique__container .swiper-container__technique .swiper-slide .btn-swipe {
+        .about-service .technique-container__swiper .swiper-slide__btn-swipe {
           display: flex;
           justify-content: space-between;
           padding-right: 16px;
@@ -678,7 +677,7 @@ body {
           border: 1px solid #eaeaea;
           box-sizing: border-box;
           border-radius: 6px; }
-          .about__service-repair .technique__container .swiper-container__technique .swiper-slide .btn-swipe .rep__text {
+          .about-service .technique-container__swiper .swiper-slide__btn-swipe .rep-text {
             align-self: flex-start;
             margin-top: 16px;
             font-family: TT Lakes;
@@ -686,10 +685,10 @@ body {
             line-height: 24px;
             letter-spacing: -0.2px;
             color: #1b1c21; }
-          .about__service-repair .technique__container .swiper-container__technique .swiper-slide .btn-swipe .arrow {
+          .about-service .technique-container__swiper .swiper-slide__btn-swipe .arrow {
             align-self: flex-end;
             margin-bottom: 16px; }
-      .about__service-repair .technique__container .swiper-container__technique .swiper-pagination__technique {
+      .about-service .technique-container__swiper-pagination {
         position: unset;
         margin-top: 16px;
         text-align: center;
@@ -697,18 +696,18 @@ body {
         transform: translate3d(0, 0, 0);
         z-index: 10; }
         @media (min-width: 768px) {
-          .about__service-repair .technique__container .swiper-container__technique .swiper-pagination__technique {
+          .about-service .technique-container__swiper-pagination {
             display: none; } }
-      .about__service-repair .technique__container .swiper-container__technique .swiper-pagination-bullet {
+      .about-service .technique-container__swiper .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
         background-color: #dddddd; }
-      .about__service-repair .technique__container .swiper-container__technique .swiper-pagination-bullet-active {
+      .about-service .technique-container__swiper .swiper-pagination-bullet-active {
         background-color: #b5b6bc; }
-      .about__service-repair .technique__container .swiper-container__technique--active {
+      .about-service .technique-container__swiper--active {
         overflow: visible;
         max-height: 100vh; }
-    .about__service-repair .technique__container .show__more__technique {
+    .about-service .technique-container__show-more {
       display: none;
       cursor: pointer;
       align-items: center;
@@ -725,15 +724,15 @@ body {
       color: #1b1c21;
       margin: 0px 0px 0px 16px; }
       @media (min-width: 768px) {
-        .about__service-repair .technique__container .show__more__technique {
+        .about-service .technique-container__show-more {
           display: flex;
           margin-left: 32px; } }
       @media (min-width: 1440px) {
-        .about__service-repair .technique__container .show__more__technique {
+        .about-service .technique-container__show-more {
           margin-left: 39px; } }
-      .about__service-repair .technique__container .show__more__technique--none {
+      .about-service .technique-container__show-more--none {
         display: none; }
-    .about__service-repair .technique__container .hide__all__technique {
+    .about-service .technique-container__hide-all {
       display: none;
       cursor: pointer;
       align-items: center;
@@ -750,74 +749,74 @@ body {
       color: #1b1c21;
       margin: 0px 0px 0px 16px; }
       @media (min-width: 768px) {
-        .about__service-repair .technique__container .hide__all__technique {
+        .about-service .technique-container__hide-all {
           margin-left: 32px; }
-          .about__service-repair .technique__container .hide__all__technique--active {
+          .about-service .technique-container__hide-all--active {
             display: block; } }
       @media (min-width: 1440px) {
-        .about__service-repair .technique__container .hide__all__technique {
+        .about-service .technique-container__hide-all {
           margin-left: 39px; } }
-    .about__service-repair .technique__container .read__arrows {
+    .about-service .technique-container .read-arrows {
       margin-right: 16px; }
-  .about__service-repair .prices__container {
+  .about-service .prices-container {
     background: #f8f8f8;
     overflow: hidden;
     padding: 0 16px; }
     @media (min-width: 768px) {
-      .about__service-repair .prices__container {
+      .about-service .prices-container {
         padding: 0 24px; } }
     @media (min-width: 1440px) {
-      .about__service-repair .prices__container {
+      .about-service .prices-container {
         padding: 0 32px; } }
-    .about__service-repair .prices__container .swiper-container--prices {
+    .about-service .prices-container .swiper-container-prices {
       position: relative;
       overflow: hidden;
       background: #f8f8f8; }
       @media (min-width: 320px) and (max-width: 767px) {
-        .about__service-repair .prices__container .swiper-container--prices {
+        .about-service .prices-container .swiper-container-prices {
           max-height: none; } }
-      .about__service-repair .prices__container .swiper-container--prices .table__caption {
+      .about-service .prices-container .swiper-container-prices .table {
         width: 100%; }
         @media (min-width: 320px) and (max-width: 767px) {
-          .about__service-repair .prices__container .swiper-container--prices .table__caption {
+          .about-service .prices-container .swiper-container-prices .table {
             display: none; } }
         @media (min-width: 768px) {
-          .about__service-repair .prices__container .swiper-container--prices .table__caption {
+          .about-service .prices-container .swiper-container-prices .table {
             display: flex;
             justify-content: space-between;
             padding-left: 16px;
             padding-right: 16px; }
-            .about__service-repair .prices__container .swiper-container--prices .table__caption .caption__text {
+            .about-service .prices-container .swiper-container-prices .table__caption-text {
               font-size: 14px;
               line-height: 16px;
               color: #7e7e82;
               mix-blend-mode: normal;
               opacity: 0.72;
               padding-bottom: 16px; }
-              .about__service-repair .prices__container .swiper-container--prices .table__caption .caption__text.rep {
+              .about-service .prices-container .swiper-container-prices .table__caption-text.rep {
                 flex-basis: 53%;
                 padding-right: 12px; }
-              .about__service-repair .prices__container .swiper-container--prices .table__caption .caption__text.price {
+              .about-service .prices-container .swiper-container-prices .table__caption-text.price {
                 flex-basis: 13.5%;
                 padding-right: 12px; }
-              .about__service-repair .prices__container .swiper-container--prices .table__caption .caption__text.temp {
+              .about-service .prices-container .swiper-container-prices .table__caption-text.temp {
                 flex-basis: 14%;
                 padding-right: 12px; }
-            .about__service-repair .prices__container .swiper-container--prices .table__caption .caption__empty {
+            .about-service .prices-container .swiper-container-prices .table__caption-empty {
               visibility: hidden;
               width: 119px;
               height: 16px; } }
-      .about__service-repair .prices__container .swiper-container--prices .swiper-wrapper {
+      .about-service .prices-container .swiper-container-prices .swiper-wrapper {
         list-style: none;
         padding: 0px;
         margin-top: 0; }
         @media (min-width: 768px) {
-          .about__service-repair .prices__container .swiper-container--prices .swiper-wrapper {
+          .about-service .prices-container .swiper-container-prices .swiper-wrapper {
             flex-direction: column; } }
         @media (min-width: 1440px) {
-          .about__service-repair .prices__container .swiper-container--prices .swiper-wrapper {
+          .about-service .prices-container .swiper-container-prices .swiper-wrapper {
             flex-wrap: wrap; } }
-      .about__service-repair .prices__container .swiper-container--prices .swiper-slide {
+      .about-service .prices-container .swiper-container-prices .swiper-slide {
         width: 260px;
         display: flex;
         flex-direction: column;
@@ -830,7 +829,7 @@ body {
         box-sizing: border-box;
         border-radius: 6px; }
         @media (min-width: 768px) {
-          .about__service-repair .prices__container .swiper-container--prices .swiper-slide {
+          .about-service .prices-container .swiper-container-prices .swiper-slide {
             width: 100%;
             height: 64px;
             flex-direction: row;
@@ -840,36 +839,36 @@ body {
             border-bottom: 1px solid #eaeaea;
             border-radius: unset; } }
         @media (min-width: 1440px) {
-          .about__service-repair .prices__container .swiper-container--prices .swiper-slide {
+          .about-service .prices-container .swiper-container-prices .swiper-slide {
             height: 64px; } }
-        .about__service-repair .prices__container .swiper-container--prices .swiper-slide .price__service {
+        .about-service .prices-container .swiper-container-prices .swiper-slide .price-service {
           display: flex;
           flex-direction: column; }
           @media (min-width: 768px) {
-            .about__service-repair .prices__container .swiper-container--prices .swiper-slide .price__service.service__block {
+            .about-service .prices-container .swiper-container-prices .swiper-slide .price-service.service-block {
               flex-basis: 53%; } }
           @media (min-width: 768px) {
-            .about__service-repair .prices__container .swiper-container--prices .swiper-slide .price__service.price__block {
+            .about-service .prices-container .swiper-container-prices .swiper-slide .price-service.price-block {
               flex-basis: 13.5%; } }
           @media (min-width: 768px) {
-            .about__service-repair .prices__container .swiper-container--prices .swiper-slide .price__service.term__block {
+            .about-service .prices-container .swiper-container-prices .swiper-slide .price-service.term-block {
               flex-basis: 14%; } }
-          .about__service-repair .prices__container .swiper-container--prices .swiper-slide .price__service .price-service__text-title {
+          .about-service .prices-container .swiper-container-prices .swiper-slide .price-service .price-service__text-title {
             font-size: 14px;
             line-height: 16px;
             color: #7e7e82;
             mix-blend-mode: normal;
             opacity: 0.72; }
             @media (min-width: 768px) {
-              .about__service-repair .prices__container .swiper-container--prices .swiper-slide .price__service .price-service__text-title {
+              .about-service .prices-container .swiper-container-prices .swiper-slide .price-service .price-service__text-title {
                 display: none; } }
-          .about__service-repair .prices__container .swiper-container--prices .swiper-slide .price__service .price-service__text-about {
+          .about-service .prices-container .swiper-container-prices .swiper-slide .price-service .price-service__text-about {
             font-size: 14px;
             line-height: 18px;
             letter-spacing: 0.2px;
             color: #1b1c21;
             padding-top: 4px; }
-        .about__service-repair .prices__container .swiper-container--prices .swiper-slide .order__btn {
+        .about-service .prices-container .swiper-container-prices .swiper-slide .order-btn {
           position: absolute;
           cursor: pointer;
           left: 125px;
@@ -884,16 +883,16 @@ body {
           box-sizing: border-box;
           border-radius: 16px;
           transition: all 0.6s; }
-          .about__service-repair .prices__container .swiper-container--prices .swiper-slide .order__btn:hover {
+          .about-service .prices-container .swiper-container-prices .swiper-slide .order-btn:hover {
             background-color: #fa88aa; }
-          .about__service-repair .prices__container .swiper-container--prices .swiper-slide .order__btn:focus {
+          .about-service .prices-container .swiper-container-prices .swiper-slide .order-btn:focus {
             background-color: #f50049; }
           @media (min-width: 768px) {
-            .about__service-repair .prices__container .swiper-container--prices .swiper-slide .order__btn {
+            .about-service .prices-container .swiper-container-prices .swiper-slide .order-btn {
               position: unset;
               left: unset;
               top: unset; } }
-          .about__service-repair .prices__container .swiper-container--prices .swiper-slide .order__btn .order__text {
+          .about-service .prices-container .swiper-container-prices .swiper-slide .order-btn__text {
             font-family: "TT Lakes";
             font-size: 12px;
             font-weight: bold;
@@ -901,7 +900,7 @@ body {
             letter-spacing: -0.15px;
             text-transform: uppercase;
             color: #ffffff; }
-      .about__service-repair .prices__container .swiper-container--prices .swiper-pagination--prices {
+      .about-service .prices-container .swiper-container-prices .swiper-pagination-prices {
         position: unset;
         margin-top: 16px;
         text-align: center;
@@ -909,24 +908,24 @@ body {
         transform: translate3d(0, 0, 0);
         z-index: 10; }
         @media (min-width: 768px) {
-          .about__service-repair .prices__container .swiper-container--prices .swiper-pagination--prices {
+          .about-service .prices-container .swiper-container-prices .swiper-pagination-prices {
             display: none; } }
-      .about__service-repair .prices__container .swiper-container--prices .swiper-pagination-bullet {
+      .about-service .prices-container .swiper-container-prices .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
         background-color: #dddddd; }
-      .about__service-repair .prices__container .swiper-container--prices .swiper-pagination-bullet-active {
+      .about-service .prices-container .swiper-container-prices .swiper-pagination-bullet-active {
         background-color: #b5b6bc; }
-    .about__service-repair .prices__container .offer__block .offer__text {
+    .about-service .prices-container .offer-block__text {
       font-family: "TT Lakes";
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.2px;
       color: #1b1c21; }
       @media (min-width: 768px) {
-        .about__service-repair .prices__container .offer__block .offer__text {
+        .about-service .prices-container .offer-block__text {
           width: 421px; } }
-    .about__service-repair .prices__container .offer__block .offer__link {
+    .about-service .prices-container .offer-block__link {
       position: relative;
       font-family: "TT Lakes";
       font-size: 16px;
@@ -938,9 +937,9 @@ body {
       padding-right: 16px;
       color: #1b1c21;
       transition: color 0.3s; }
-      .about__service-repair .prices__container .offer__block .offer__link:hover {
+      .about-service .prices-container .offer-block__link:hover {
         color: #ff3e79; }
-      .about__service-repair .prices__container .offer__block .offer__link::after {
+      .about-service .prices-container .offer-block__link::after {
         content: "";
         position: absolute;
         right: 4px;
@@ -964,39 +963,39 @@ body {
     .modal-window {
       width: 440px;
       box-shadow: 5px 0 50px 10px #7e7e82; } }
-  .modal-window .modal__block {
+  .modal-window .modal-block {
     height: 100%; }
-    .modal-window .modal__block .modal-btn__close {
+    .modal-window .modal-block__btn-close {
       background: none;
       border: none;
       padding: 24px 16px 0; }
       @media (min-width: 520px) {
-        .modal-window .modal__block .modal-btn__close {
+        .modal-window .modal-block__btn-close {
           position: absolute;
           left: -94px;
           top: -8px;
           z-index: 71; } }
-    .modal-window .modal__block .modal__head {
+    .modal-window .modal-block__head {
       display: flex;
       align-items: center; }
-      .modal-window .modal__block .modal__head .title {
+      .modal-window .modal-block__head .title {
         font-size: 24px;
         line-height: 32px;
         letter-spacing: -0.6px;
         color: #1b1c21;
         padding-left: 14px; }
-      .modal-window .modal__block .modal__head::before {
+      .modal-window .modal-block__head::before {
         content: "";
         width: 4px;
         height: 40px;
         background-color: #41f6d7;
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px; }
-    .modal-window .modal__block .form__modal {
+    .modal-window .modal-block .form {
       display: flex;
       flex-direction: column;
       padding: 0 16px; }
-      .modal-window .modal__block .form__modal .modal__input {
+      .modal-window .modal-block .form__input {
         width: 100%;
         height: 48px;
         padding: 12px 16px;
@@ -1008,7 +1007,7 @@ body {
         line-height: 24px;
         letter-spacing: -0.2px;
         color: #b5b6bc; }
-      .modal-window .modal__block .form__modal .feed__text {
+      .modal-window .modal-block .form .feed-text {
         height: 118px;
         padding: 12px 16px;
         border: 1px solid #eaeaea;
@@ -1018,15 +1017,15 @@ body {
         line-height: 24px;
         letter-spacing: -0.2px;
         color: #b5b6bc; }
-      .modal-window .modal__block .form__modal .privacy__text {
+      .modal-window .modal-block .form .privacy-text {
         font-family: "TT Lakes", sans-serif;
         font-size: 14px;
         line-height: 16px;
         color: #7e7e82; }
-        .modal-window .modal__block .form__modal .privacy__text .prev-link {
+        .modal-window .modal-block .form .privacy-text .prev-link {
           text-decoration: none;
           color: #ff3e79; }
-      .modal-window .modal__block .form__modal .mod-btn__send {
+      .modal-window .modal-block .form__mod-btn-send {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1038,7 +1037,7 @@ body {
         border: none;
         background-color: #ff3e79;
         transition: all 0.3s; }
-        .modal-window .modal__block .form__modal .mod-btn__send .mod-btn__text {
+        .modal-window .modal-block .form__mod-btn-send .mod-btn-text {
           font-family: "TT Lakes", sans-serif;
           text-transform: uppercase;
           color: #fff;
